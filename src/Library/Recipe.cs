@@ -26,7 +26,10 @@ namespace Full_GRASP_And_SOLID.Library
         {
             this.steps.Remove(step);
         }
-
+        /*
+        Mantenemos en la clase Recipe la responsabilidad específica de redactar la receta. Es decir,
+        debe preparar el texto que será impreso por los distintos medios de impresión futuros.
+        */
         public string WriteRecipe(){
             StringBuilder builder = new StringBuilder($"Receta de {this.FinalProduct.Description}:\n");
             foreach (Step step in this.Steps)
